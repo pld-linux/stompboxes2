@@ -27,7 +27,7 @@ Procesor efektów d¼wiêkowych czasu rzeczywistego.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 autoheader
 automake -a -f
 %configure
