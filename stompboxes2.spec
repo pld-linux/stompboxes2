@@ -11,6 +11,7 @@ License:	GPL v2
 Vendor:		Hector Urtubia <urtubia@mrbook.org>
 Group:		X11/Applications/Sound
 Source0:	http://mrbook.org/stompboxes/%{name}-%{version}.tar.gz
+# Source0-md5:	050a90e09952749412f8ac0b07938071
 Patch0:		%{name}-Makefile.in.patch
 URL:		http://mrbook.org/stompboxes/
 BuildRequires:	autoconf
