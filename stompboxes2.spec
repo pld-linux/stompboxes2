@@ -8,8 +8,8 @@ Name:		stompboxes2
 Version:	0.3
 Release:	1
 License:	GPL v2
-Group:		X11/Applications/Multimedia
 Vendor:		Hector Urtubia <urtubia@mrbook.org>
+Group:		X11/Applications/Sound
 Source0:	http://mrbook.org/stompboxes/%{name}-%{version}.tar.gz
 Patch0:		%{name}-Makefile.in.patch
 URL:		http://mrbook.org/stompboxes/
@@ -28,7 +28,7 @@ Real-time audio effects processor.
 Procesor efektów d¼wiêkowych czasu rzeczywistego.
 
 %prep
-%setup  -q
+%setup -q
 %patch0 -p1
 
 %build
