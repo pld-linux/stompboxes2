@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Vendor:		Hector Urtubia <urtubia@mrbook.org>
 Source0:	http://mrbook.org/stompboxes/%{name}-%{version}.tar.gz
+Patch0:		%{name}-Makefile.in.patch
 URL:		http://mrbook.org/stompboxes/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,12 +25,14 @@ Procesor efektów d¼wiêkowych czasu rzeczywistego.
 
 %prep
 %setup  -q
+%patch0 -p1
 
 %build
+rm -f missing
 aclocal
 %{__autoconf}
 autoheader
-automake -a -f
+%{__automake}
 %configure
 %{__make}
 
@@ -42,14 +45,12 @@ install plugins/*.so $RPM_BUILD_ROOT%{_datadir}/%{name}/plugins
 install pixmaps/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
 ln -s %{_pixmapsdir}/%{name} $RPM_BUILD_ROOT%{_datadir}/%{name}/pixmaps
 
-gzip -9nf doc/QUICKSTART ChangeLog LOG README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/*.gz *.gz
+%doc doc/QUICKSTART ChangeLog LOG README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/plugins
