@@ -19,7 +19,6 @@ BuildRequires:	gtk+-devel
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Real-time audio effects processor.
