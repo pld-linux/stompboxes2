@@ -1,3 +1,7 @@
+#
+# TODO:
+# - add desktop file.
+#
 Summary:	Real-time audio effects processor
 Summary(pl):	Procesor efektów d¼wiêkowych czasu rzeczywistego
 Name:		stompboxes2
