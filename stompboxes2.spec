@@ -5,9 +5,9 @@
 Summary:	Real-time audio effects processor
 Summary(pl):	Procesor efektów d¼wiêkowych czasu rzeczywistego
 Name:		stompboxes2
-Version:	0.2
+Version:	0.3
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications/Multimedia
 Vendor:		Hector Urtubia <urtubia@mrbook.org>
 Source0:	http://mrbook.org/stompboxes/%{name}-%{version}.tar.gz
@@ -46,8 +46,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/plugins,%{_pixmapsdir}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 install plugins/*.so $RPM_BUILD_ROOT%{_datadir}/%{name}/plugins
-install pixmaps/*.xpm $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
-ln -s %{_pixmapsdir}/%{name} $RPM_BUILD_ROOT%{_datadir}/%{name}/pixmaps
+install pixmaps/*.xpm $RPM_BUILD_ROOT%{_datadir}/%{name}/pixmaps
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,4 +59,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}/plugins
 %attr(755,root,root) %{_datadir}/%{name}/plugins/*
 %{_datadir}/%{name}/pixmaps
-%{_pixmapsdir}/%{name}
