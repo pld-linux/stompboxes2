@@ -1,0 +1,18 @@
+--- stompboxes2-0.2/plugins/Makefile.in~	Wed May 22 21:47:52 2002
++++ stompboxes2-0.2/plugins/Makefile.in	Wed May 22 21:47:52 2002
+@@ -1,12 +1,12 @@
+-CC = gcc
++CC = @CC@
+ LDFLAGS = `gtk-config --libs` -lm 
+-CFLAGS = -Wall -I.. -g `gtk-config --cflags`
++CFLAGS = -Wall -I.. @CFLAGS@ `gtk-config --cflags`
+ OBJS =  volume.o reverse.o delay.o flanger.o \
+ 	chorus.o 3-bandeq.o distortion2.o overdrive.o \
+ 	noisegate.o \
+ 	1to2mix.o 2to1mix.o 
+ 
+-SHARED = -O2 -shared
++SHARED = @CFLAGS@ -shared
+ SHARED_OBJS = $(OBJS:.o=.so)
+ 
+ .SUFFIXES: .so
