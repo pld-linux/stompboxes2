@@ -1,5 +1,5 @@
---- stompboxes2-0.2/plugins/Makefile.in~	Wed May 22 21:47:52 2002
-+++ stompboxes2-0.2/plugins/Makefile.in	Wed May 22 21:47:52 2002
+--- stompboxes2-0.3/plugins/Makefile.in.orig	Thu Jul 25 07:23:39 2002
++++ stompboxes2-0.3/plugins/Makefile.in	Sun Aug 18 14:36:09 2002
 @@ -1,12 +1,12 @@
 -CC = gcc
 +CC = @CC@
@@ -9,7 +9,7 @@
  OBJS =  volume.o reverse.o delay.o flanger.o \
  	chorus.o 3-bandeq.o distortion2.o overdrive.o \
  	noisegate.o \
- 	1to2mix.o 2to1mix.o 
+ 	1to2mix.o 2to1mix.o waveout.o
  
 -SHARED = -O2 -shared
 +SHARED = @CFLAGS@ -shared
