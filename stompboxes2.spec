@@ -3,7 +3,7 @@
 # - add desktop file.
 #
 Summary:	Real-time audio effects processor
-Summary(pl):	Procesor efektów d¼wiêkowych czasu rzeczywistego
+Summary(pl.UTF-8):   Procesor efektÃ³w dÅºwiÄ™kowych czasu rzeczywistego
 Name:		stompboxes2
 Version:	0.3
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Real-time audio effects processor.
 
-%description -l pl
-Procesor efektów d¼wiêkowych czasu rzeczywistego.
+%description -l pl.UTF-8
+Procesor efektÃ³w dÅºwiÄ™kowych czasu rzeczywistego.
 
 %prep
 %setup -q
