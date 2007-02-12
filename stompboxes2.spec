@@ -3,7 +3,7 @@
 # - add desktop file.
 #
 Summary:	Real-time audio effects processor
-Summary(pl.UTF-8):   Procesor efektów dźwiękowych czasu rzeczywistego
+Summary(pl.UTF-8):	Procesor efektów dźwiękowych czasu rzeczywistego
 Name:		stompboxes2
 Version:	0.3
 Release:	1
